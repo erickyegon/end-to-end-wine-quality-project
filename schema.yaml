@@ -1,0 +1,71 @@
+columns:
+  fixed_acidity:
+    type: float64
+    description: "Most acids involved with wine or fixed or nonvolatile (do not evaporate readily)"
+    
+  volatile_acidity:
+    type: float64
+    description: "The amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste"
+    
+  citric_acid:
+    type: float64
+    description: "Found in small quantities, citric acid can add 'freshness' and flavor to wines"
+    
+  residual_sugar:
+    type: float64
+    description: "The amount of sugar remaining after fermentation stops"
+    
+  chlorides:
+    type: float64
+    description: "The amount of salt in the wine"
+    
+  free_sulfur_dioxide:
+    type: float64
+    description: "The free form of SO2 exists in equilibrium between molecular SO2 and bisulfite ion; it prevents microbial growth and the oxidation of wine"
+    
+  total_sulfur_dioxide:
+    type: float64
+    description: "Amount of free and bound forms of S02; in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine"
+    
+  density:
+    type: float64
+    description: "The density of water is close to that of water depending on the percent alcohol and sugar content"
+    
+  pH:
+    type: float64
+    description: "Describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale"
+    
+  sulphates:
+    type: float64
+    description: "A wine additive which can contribute to sulfur dioxide gas (S02) levels, which acts as an antimicrobial and antioxidant"
+    
+  alcohol:
+    type: float64
+    description: "The percent alcohol content of the wine"
+    
+  quality:
+    type: int64
+    description: "Output variable (based on sensory data, score between 0 and 10)"
+    range: [0, 10]
+
+# Target variable for the ML model
+target_column: quality
+
+# Dataset metadata
+dataset_info:
+  name: "Red Wine Quality Dataset"
+  description: "The dataset contains various chemical properties of red wine samples and their quality ratings."
+  rows: 1599
+  categorical_features: []
+  numerical_features:
+    - fixed_acidity
+    - volatile_acidity
+    - citric_acid
+    - residual_sugar
+    - chlorides
+    - free_sulfur_dioxide
+    - total_sulfur_dioxide
+    - density
+    - pH
+    - sulphates
+    - alcohol

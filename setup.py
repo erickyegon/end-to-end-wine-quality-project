@@ -1,12 +1,10 @@
-
 from setuptools import setup, find_packages
 
 setup(
     name="mlProject",
     version="0.0.1",
-    author="Erick Kiprotich Yegon",
+    author="Erick K. Yegon",
     author_email="keyegon@gmail.com",
-    description="A small package for ML pipeline project",
-    packages=find_packages(),
-    python_requires=">=3.7",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
 )
